@@ -66,8 +66,17 @@ const readline = require('readline').createInterface({
 
 
 
-  //fel9: kérj be egy számot, és írd ki, hogy páros-e vagy páratlan
-  readline.question('Neved?\n', val1 => {
-    console.log(`Szia ${val1}!`);
+//fel9: kérj be egy számot, és írd ki, hogy páros-e vagy páratlan
+readline.question('Írj egy számot!\n', szam => {
+    if(szam % 2 == 0){
+       console.log("páros") 
+    }
+    else {
+        console.log("páratlan")
+    }
+    
+    //páros-e vagy páratlan
+
     readline.close();
-});
+}
+);
