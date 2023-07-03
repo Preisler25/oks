@@ -115,3 +115,14 @@ readline.question('Adj meg egy számot!', szam =>{
 
 
 */
+const readline = require('readline').createInterface({
+    input: process.stdin,
+    output: process.stdout
+  });
+  
+let a = readline.question('Adj meg egy számot!\n', szam =>{
+    readline.close();
+    return szam;
+});
+
+console.log(a);
