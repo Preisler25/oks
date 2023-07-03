@@ -83,18 +83,6 @@ readline.question('Írj egy számot!\n', szam => {
 
     readline.close();
 });
-*/
-
-const { log } = require('console');
-const { CLIENT_RENEG_LIMIT, CLIENT_RENEG_WINDOW } = require('tls');
-
-const readline = require('readline').createInterface({
-    input: process.stdin,
-    output: process.stdout
-  });
-  
-
-
 
 //fel10: kérj be egy számot, és írd ki, hogy pozitív-e vagy negatív ||  <0 || >=0  \\\\ sting[0] "alam" --> "a", sting[1] "l", sting[2] "a", sting[3] "m"
 
@@ -125,5 +113,5 @@ readline.question('Adj meg egy számot!', szam =>{
     readline.close();
 });
 
-//szam.slice(0,1); == szam[0];
-//szam.slice(1,2); == szam[1];
+
+*/
