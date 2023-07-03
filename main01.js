@@ -49,26 +49,16 @@ c *= 4; // c = c * 4;
 c /= 4; // c = c / 4;
 c %= 4; // c = c % 4;
 c **= 4; // c = c ** 4;
- 
-//.......
-
-*/
-
-const readline = require('readline').createInterface({
-    input: process.stdin,
-    output: process.stdout
-  });
-  
-
-
-
-
-
-
 
 //fel9: kérj be egy számot, és írd ki, hogy páros-e vagy páratlan
+
+//(param, param) ==> func ==> { code } ==> callback
+//[list element, list element, list element] ==> array
+//{key: value} ==> object
+
+
 readline.question('Írj egy számot!\n', szam => {
-    if(szam % 2 == 0){
+    if(parseInt(szam) % 2 == 0){
        console.log("páros") 
     }
     else {
@@ -78,5 +68,62 @@ readline.question('Írj egy számot!\n', szam => {
     //páros-e vagy páratlan
 
     readline.close();
-}
-);
+});
+
+readline.question('Írj egy számot!\n', szam => {
+
+    szam = parseInt(szam);
+    
+    if (szam < 0) {
+        console.log("Negatív")
+    }
+    if (szam >= 0) {
+        console.log("Pozitív")
+    }
+
+    readline.close();
+});
+*/
+
+const { log } = require('console');
+const { CLIENT_RENEG_LIMIT, CLIENT_RENEG_WINDOW } = require('tls');
+
+const readline = require('readline').createInterface({
+    input: process.stdin,
+    output: process.stdout
+  });
+  
+
+
+
+//fel10: kérj be egy számot, és írd ki, hogy pozitív-e vagy negatív ||  <0 || >=0  \\\\ sting[0] "alam" --> "a", sting[1] "l", sting[2] "a", sting[3] "m"
+
+readline.question('Adj meg egy számot!', szam =>{
+
+    //szam (sting) --> előjel
+    let elojel = szam.slice(0,1);
+
+    //szam (int)
+    szam = parseInt(szam);
+
+    //szam értékét vizsgáljuk hogy szam-e
+    if (typeof szam == "number") {
+
+        if (elojel == "-"){
+            console.log("Negatív");
+        }
+    
+        else {
+            console.log("Pozitív");
+        }
+    }
+
+    else {
+        console.log ("KÖCSOG VAGY TE BUZI! Ui.: Számot írj pls")
+    }
+    
+    readline.close();
+});
+
+//szam.slice(0,1); == szam[0];
+//szam.slice(1,2); == szam[1];
