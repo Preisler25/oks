@@ -52,10 +52,6 @@ c **= 4; // c = c ** 4;
 
 //fel9: kérj be egy számot, és írd ki, hogy páros-e vagy páratlan
 
-//(param, param) ==> func ==> { code } ==> callback
-//[list element, list element, list element] ==> array
-//{key: value} ==> object
-
 
 readline.question('Írj egy számot!\n', szam => {
     if(parseInt(szam) % 2 == 0){
@@ -84,7 +80,6 @@ readline.question('Írj egy számot!\n', szam => {
     readline.close();
 });
 
-//fel10: kérj be egy számot, és írd ki, hogy pozitív-e vagy negatív ||  <0 || >=0  \\\\ sting[0] "alam" --> "a", sting[1] "l", sting[2] "a", sting[3] "m"
 
 readline.question('Adj meg egy számot!', szam =>{
 
